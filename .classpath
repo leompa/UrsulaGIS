@@ -76,12 +76,12 @@
 	<classpathentry exported="true" kind="lib" path="libs/zxing/core-3.4.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/zxing/javase-3.4.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/gdal.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/gluegen-rt-natives-windows-amd64.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/gluegen-rt-natives-windows-i586.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/gluegen-rt.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/jogl-all-natives-windows-amd64.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/jogl-all-natives-windows-i586.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/jogl-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acer/Documents/GitHub/UrsulaGIS/libs/gdal/gluegen-rt-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acer/Documents/GitHub/UrsulaGIS/libs/gdal/gluegen-rt-natives-windows-i586.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acer/Documents/GitHub/UrsulaGIS/libs/gdal/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acer/Documents/GitHub/UrsulaGIS/libs/gdal/jogl-all-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acer/Documents/GitHub/UrsulaGIS/libs/gdal/jogl-all-natives-windows-i586.jar"/>
+	<classpathentry kind="lib" path="C:/Users/acer/Documents/GitHub/UrsulaGIS/libs/gdal/jogl-all.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/worldwind.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/worldwindx.jar"/>
 	<classpathentry kind="output" path="bin"/>
