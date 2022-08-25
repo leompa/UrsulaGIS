@@ -36,6 +36,8 @@ import utils.ProyectionConstants;
  */
 public class ConvertirASiembraTask extends ProcessMapTask<SiembraItem,SiembraLabor> {
 	Map<String,Double> plantasM2ObjetivoMap = null;//new Double(0);
+	Map<String,Double> fertilizanteCostadoMap = null;
+	Map<String,Double> fertilizanteLineaMap = null;
 	CosechaLabor cosecha=null;
 
 	public ConvertirASiembraTask(CosechaLabor _cosecha,SiembraLabor labor,Map<String,Double> valores){
@@ -43,6 +45,14 @@ public class ConvertirASiembraTask extends ProcessMapTask<SiembraItem,SiembraLab
 		plantasM2ObjetivoMap=valores;
 		cosecha=_cosecha;
 
+	}
+	
+	public ConvertirASiembraTask(CosechaLabor _cosecha,SiembraLabor labor,Map<String,Double> valoresSemilla,Map<String,Double> valoresFL,Map<String,Double> valoresFC ){
+		super(labor);
+		plantasM2ObjetivoMap=valoresSemilla;
+		fertilizanteCostadoMap =valoresFC;
+		fertilizanteLineaMap = valoresFL;
+		cosecha=_cosecha;
 	}
 
 	public void doProcess() throws IOException {
@@ -73,6 +83,10 @@ public class ConvertirASiembraTask extends ProcessMapTask<SiembraItem,SiembraLab
 			si.setDosisHa(semillasHa*pmil/(1000*1000));//1000semillas*1000gramos para pasar a kg/ha
 
 			si.setDosisML(semillasMetroLineal);
+			
+			if ( fertilizanteLineaMap != null) si.setDosisFertLinea(fertilizanteLineaMap.get(nombre));
+			
+			if (fertilizanteCostadoMap != null) si.setDosisFertCostado(fertilizanteCostadoMap.get(nombre));
 			//dosis sembradora va en semillas cada 10mts
 			//dosis valorizacion va en unidad de compra; kg o bolsas de 80000 semillas o 50kg
 			

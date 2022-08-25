@@ -412,7 +412,7 @@ public class ConfigGUI {
 		tabla.getColumns().add(dColumn);			
 
 
-		Scene scene = new Scene(tabla, 800, 600);
+		Scene scene = new Scene(tabla, 200, 300);
 		Stage tablaStage = new Stage();
 		tablaStage.getIcons().add(new Image(JFXMain.ICON));
 		tablaStage.setTitle(Messages.getString("Recorrida.asignarValores")); //$NON-NLS-1$

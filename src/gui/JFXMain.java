@@ -3966,8 +3966,11 @@ public class JFXMain extends Application {
 
 		Map<String,Double> mapClaseValor = new ConfigGUI(this).doAsignarValoresCosecha(cosecha,Messages.getString("JFXMain.Densidad"));//"Densidad pl/m2"
 		
+		Map<String,Double> mapClaseFLValor = new ConfigGUI(this).doAsignarValoresCosecha(cosecha,Messages.getString("JFXMain.Dosis"));//"Densidad pl/fertilizante  linea"
+		
+		Map<String,Double> mapClaseFCValor = new ConfigGUI(this).doAsignarValoresCosecha(cosecha,Messages.getString("JFXMain.Dosis"));//"Densidad fertilizante  costado"
 
-		ConvertirASiembraTask csTask = new ConvertirASiembraTask(cosecha,siembra,mapClaseValor);
+		ConvertirASiembraTask csTask = new ConvertirASiembraTask(cosecha,siembra,mapClaseValor,mapClaseFLValor,mapClaseFCValor);
 
 		csTask.installProgressBar(progressBox);
 
@@ -3985,7 +3988,7 @@ public class JFXMain extends Application {
 	
 	/**
 	 * toma una cosecha, pregunta las densidades deseadas para cada ambiente
-	 * y crea una siembra teniendo la informacion ingresada y la categoria a la que pertenece cada poligono
+	 * y crea una fertlizada teniendo la informacion ingresada y la categoria a la que pertenece cada poligono
 	 * @param cosecha
 	 */
 	private void doCrearFertilizacion(CosechaLabor cosecha) {
@@ -4002,6 +4005,8 @@ public class JFXMain extends Application {
 		}		
 
 		Map<String,Double> mapClaseValor = new ConfigGUI(this).doAsignarValoresCosecha(cosecha,Messages.getString("JFXMain.Dosis"));//"Densidad pl/m2"
+		
+		
 		
 
 		ConvertirAFertilizacionTask csTask = new ConvertirAFertilizacionTask(cosecha,siembra,mapClaseValor);
