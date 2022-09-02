@@ -345,7 +345,7 @@ public class ConfigGUI {
 		//Map<String, List<Muestra>> nombresMuestraMap = muestras.stream().collect(Collectors.groupingBy(Muestra::getNombre));
 
 		List<Map<String,Object>> data = new ArrayList<Map<String,Object>>();
-
+		
 
 		//for(String nombre : nombresMuestraMap.keySet()) {
 		// Map<String,Number> props =null;
@@ -410,10 +410,12 @@ public class ConfigGUI {
 				});
 		dColumn.setEditable(true);
 		tabla.getColumns().add(dColumn);			
-
+		
 
 		Scene scene = new Scene(tabla, 200, 300);
 		Stage tablaStage = new Stage();
+		
+	
 		tablaStage.getIcons().add(new Image(JFXMain.ICON));
 		tablaStage.setTitle(Messages.getString("Recorrida.asignarValores")); //$NON-NLS-1$
 		tablaStage.setScene(scene);

@@ -345,6 +345,7 @@ public class UpdateTask  extends Task<File>{
 	 * @param message
 	 */
 	private static void showWelcomeMessage(String message) {
+		
 		Platform.runLater(()->{		    
 			WebView webView = new WebView();
 			// webView.setPrefSize(600, 400);
@@ -365,7 +366,7 @@ public class UpdateTask  extends Task<File>{
 			welcomeStage.initOwner(JFXMain.stage);
 			welcomeStage.getIcons().addAll(JFXMain.stage.getIcons());
 			welcomeStage.setTitle(Messages.getString("UpdateTaskWelcome.Title"));//"Bienvenido!");
-			welcomeStage.show();
+		//	welcomeStage.show(); // anulo el inicio para que no muestre nada 
 			
 //			engine.getLoadWorker().stateProperty().addListener((observableState, oldState, newState)->{
 //				System.out.println("new state "+newState);
